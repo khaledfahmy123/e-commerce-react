@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Small e-commerce test app
+it essentially consists of four components
+Add-product-form component
+Data-Fetching-and-Validation component
+Home component
+Product-Card component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Add-Product-Form Component
+it contains the form through which the user submits a new product
 
-## Available Scripts
+## Data-Fetching-and-Validation Component
+you can call this the gateway to the backend it contains the 4 functions
 
-In the project directory, you can run:
+#### FetchData Func:
+used to send a get request to get all products from the database to be displayed 
 
-### `npm start`
+#### postData Func:
+used to send post request to the backend with the form data to store a new product
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### deleteData Func:
+used to send the a delete request with the array of products' sku, that you selected them, to the backend to be deleted at once instead of deleting one by one to reduce requests and transactions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*Note*: here the delete request sent as a post request because there the backend forbids using delete requests because of a "CORS" issue. hence my solution is a little bit sneaky in the backend i check a property called "status" if its value "delete" i deal with it as a delete request if not i deal with it as a normal post request
 
-### `npm test`
+#### isFormValid Func:
+used to check the validity of the form data the user entered before sending it to the backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Home Component
+here you will find the structure of the main page
+==> it uses the product-card component to display the products fetched in a proper design
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Product-Card Component
+here you will find the template for the product card found in the home page and as you have noticed it's a stateless component

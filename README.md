@@ -1,9 +1,9 @@
 # Small e-commerce test app
 it essentially consists of four components
-Add-product-form component
-Data-Fetching-and-Validation component
-Home component
-Product-Card component
+  * Add-product-form component
+  * Data-Fetching-and-Validation component
+  * Home component
+  * Product-Card component
 
 ## Add-Product-Form Component
 it contains the form through which the user submits a new product

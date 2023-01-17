@@ -11,6 +11,14 @@ it contains the form through which the user submits a new product
 ## Data-Fetching-and-Validation Component
 you can call this the gateway to the backend it contains the 4 functions
 
+function      | Description
+------------- | -------------
+FetchData     | used to send a get request to get all products from the database to be displayed 
+postData      | used to send post request to the backend with the form data to store a new product
+
+deleteData    | used to send the a delete request with the array of products' sku, that you selected them, to the backend to be deleted at once instead of deleting one by one to reduce requests and transactions **Note**: here the delete request sent as a post request because there the backend forbids using delete requests because of a "CORS" issue. hence my solution is a little bit sneaky in the backend i check a property called "status" if its value "delete" i deal with it as a delete request if not i deal with it as a normal post request
+isFormValid   | used to check the validity of the form data the user entered before sending it to the backend
+
 ### FetchData Func:
 used to send a get request to get all products from the database to be displayed 
 

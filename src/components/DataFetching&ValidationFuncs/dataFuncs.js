@@ -1,12 +1,13 @@
+var sitelink = "https://e-commerce-frogy.000webhostapp.com/";
+
 export const fetchData = () => {
-  return fetch("https://e-commerce-frog.000webhostapp.com/").then((response) =>
-    response.json()
-  );
+  console.log(sitelink);
+  return fetch(sitelink).then((response) => response.json());
 };
 
 export const postData = (temp) => {
   console.log(temp);
-  fetch("https://e-commerce-frog.000webhostapp.com/", {
+  fetch(sitelink, {
     method: "post",
     mode: "no-cors",
     headers: {
@@ -22,7 +23,7 @@ export const postData = (temp) => {
 };
 
 export const deleteData = (temp) => {
-  return fetch("https://e-commerce-frog.000webhostapp.com/", {
+  return fetch(sitelink, {
     method: "post",
     mode: "no-cors",
     headers: {

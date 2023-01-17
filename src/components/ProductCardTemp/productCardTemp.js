@@ -9,7 +9,7 @@ const Product = (props) => {
           type="checkbox"
           className="delete-checkbox"
           onChange={toggleHandler}
-          name={data.id}
+          name={data.sku}
         />
         <main>
           <p>{data.sku}</p>

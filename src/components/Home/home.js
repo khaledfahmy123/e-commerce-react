@@ -55,7 +55,7 @@ const Home = (props) => {
                 <>
                   <Product
                     data={e}
-                    key={e.id}
+                    key={e.sku}
                     toggleHandler={addToDeleteList}
                   />
                 </>

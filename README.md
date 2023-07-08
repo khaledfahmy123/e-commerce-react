@@ -1,5 +1,5 @@
-# App [Link](https://test-ecommerce-frog.netlify.app/)
-# Small e-commerce test app
+# 
+# Small e-commerce test app (App [Link](https://test-ecommerce-frog.netlify.app/))
 it essentially consists of four components
   * Add-product-form component
   * Data-Fetching-and-Validation component
